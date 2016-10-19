@@ -5,6 +5,8 @@ public class PoopOnHuman : MonoBehaviour {
 
     public Sprite normal;
     public Sprite pooped;
+    public int pointsWorth;
+    public Score scoreScript;
 
     SpriteRenderer SpriteRenderer;
 
@@ -23,6 +25,7 @@ public class PoopOnHuman : MonoBehaviour {
         if (other.gameObject.CompareTag("Shit"))
         {
             SpriteRenderer.sprite = pooped;
+            scoreScript.AddScore(pointsWorth);
         }
     }
 }

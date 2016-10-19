@@ -10,11 +10,5 @@ public class PoopBehaviour : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-
-        if (other.gameObject.CompareTag("Human"))
-        {
-            Destroy(gameObject);
-        }
     }
-
 }
