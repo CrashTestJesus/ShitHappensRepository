@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-
 
 public class PoopingScript : MonoBehaviour {
 
@@ -16,12 +14,6 @@ public class PoopingScript : MonoBehaviour {
 
     bool canShit = true;
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
 	void Update () {
         if (canShit == true)
         {

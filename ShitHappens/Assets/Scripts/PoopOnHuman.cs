@@ -5,19 +5,16 @@ public class PoopOnHuman : MonoBehaviour {
 
     public Sprite normal;
     public Sprite pooped;
+
     public int pointsWorth;
+
     public Score scoreScript;
 
     SpriteRenderer SpriteRenderer;
 
-	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         SpriteRenderer = GetComponent<SpriteRenderer>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 
     void OnTriggerEnter2D(Collider2D other)
