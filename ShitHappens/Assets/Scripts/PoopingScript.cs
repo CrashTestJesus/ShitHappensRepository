@@ -17,7 +17,7 @@ public class PoopingScript : MonoBehaviour {
 	void Update () {
         if (canShit == true)
         {
-            if (Input.GetButtonDown("Red") && poop == null)
+            if (Input.GetButtonDown("Red"))
             {
                 poop = (GameObject)Instantiate(bullet, transform.position, transform.rotation);
                 poop.transform.position = new Vector3(pigeon.position.x, 1.5f, 0f);

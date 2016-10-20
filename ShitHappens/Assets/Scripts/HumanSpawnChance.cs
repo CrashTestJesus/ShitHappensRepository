@@ -5,8 +5,6 @@ public class HumanSpawnChance : MonoBehaviour {
 
     public GameObject[] Humans;
 
-    int RandomNumber;
-
     bool canSpawn = true;
 
 	// Use this for initialization
@@ -19,7 +17,7 @@ public class HumanSpawnChance : MonoBehaviour {
     {
 
         // Human spawner
-         if (canSpawn == true)
+        if (canSpawn == true)
         {
             Instantiate(Humans[Random.Range(0, Humans.Length)], new Vector3(10f, -2f, 0f), Quaternion.identity);
             canSpawn = false;
