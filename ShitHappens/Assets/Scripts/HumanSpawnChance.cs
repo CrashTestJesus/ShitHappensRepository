@@ -3,18 +3,33 @@ using System.Collections;
 
 public class HumanSpawnChance : MonoBehaviour {
 
-    public GameObject FemaleHuman;
-    public GameObject MaleHuman;
+    public GameObject[] Humans;
 
+    int RandomNumber;
 
+    bool canSpawn = true;
 
 	// Use this for initialization
 	void Start () {
-        transform.position = new Vector3(10f, -2f, 0f);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        // Human spawner
+         if (canSpawn == true)
+        {
+            Instantiate(Humans[Random.Range(0, Humans.Length)], new Vector3(10f, -2f, 0f), Quaternion.identity);
+            canSpawn = false;
+            StartCoroutine(HumanSpawnDelay());
+        }
+    }
+
+    IEnumerator HumanSpawnDelay()
+    {
+        yield return new WaitForSeconds(Random.Range(2, 3));
+        canSpawn = true;
+    }
 }
