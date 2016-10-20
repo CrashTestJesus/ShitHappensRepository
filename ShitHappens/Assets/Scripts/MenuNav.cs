@@ -14,19 +14,30 @@ public class MenuNav : MonoBehaviour {
         float xMove = Input.GetAxis("Horizontal");
         float yMove = Input.GetAxis("Vertical"); 
 
-        if(xMove > 0 && canMove && index >= 1 && index <= 2)
+        if(xMove > 0 && canMove && index >= 1 && index <= 2 && !bottomRow)
         {
             canMove = false;
             index++;
             StartCoroutine(SelectDelay());
         }
-        if (xMove < 0 && canMove && index >= 2 && index <= 3)
+        if (xMove < 0 && canMove && index >= 2 && index <= 3 && !bottomRow)
         {
             canMove = false;
             index--;
             StartCoroutine(SelectDelay());
         }
-
+        if (xMove > 0 && canMove && index >= 1 && index <= 2 && bottomRow)
+        {
+            canMove = false;
+            index++;
+            StartCoroutine(SelectDelay());
+        }
+        if (xMove < 0 && canMove && index >= 2 && index <= 3 && bottomRow)
+        {
+            canMove = false;
+            index--;
+            StartCoroutine(SelectDelay());
+        }
     }
     IEnumerator SelectDelay()
     {
