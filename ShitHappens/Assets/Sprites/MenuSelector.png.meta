@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a1ed73eabcbc73241b0d7e1bc7990be3
-timeCreated: 1476970935
+guid: 8592df97f38bc7b4aa673a395fbf51f5
+timeCreated: 1476966842
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PLAY Button_0
+    21300000: MenuSelector_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,13 +54,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PLAY Button_0
+      name: MenuSelector_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 466
-        height: 205
+        x: 22
+        y: 22
+        width: 52
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

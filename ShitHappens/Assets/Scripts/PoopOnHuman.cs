@@ -14,6 +14,7 @@ public class PoopOnHuman : MonoBehaviour {
 
 	void Start ()
     {
+        scoreScript = GameObject.Find("Score").GetComponent<Score>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
