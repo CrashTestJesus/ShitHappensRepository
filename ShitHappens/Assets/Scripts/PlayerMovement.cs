@@ -16,10 +16,13 @@ public class PlayerMovement : MonoBehaviour {
 
     SpriteRenderer spriteRen;
 
+    Animator anim;
+
     GameManager manager;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         spriteRen = GetComponent<SpriteRenderer>();
         sprites[0] = manager.playerSprite;
@@ -30,6 +33,27 @@ public class PlayerMovement : MonoBehaviour {
         else
         {
             spriteRen.sprite = failSafe;
+        }
+        switch (manager.kind)
+        {
+            case species.hat:
+                anim.SetBool("hat", true);
+                break;
+            case species.pirate:
+                anim.SetBool("hat", true);
+                break;
+            case species.emo:
+                anim.SetBool("hat", true);
+                break;
+            case species.fairy:
+                anim.SetBool("hat", true);
+                break;
+            case species.girl:
+                anim.SetBool("hat", true);
+                break;
+            case species.princess:
+                anim.SetBool("hat", true);
+                break;
         }
     }
 

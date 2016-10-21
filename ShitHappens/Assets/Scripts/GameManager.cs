@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+    public species kind;
     public Sprite playerSprite;
 
     public int playerScore;

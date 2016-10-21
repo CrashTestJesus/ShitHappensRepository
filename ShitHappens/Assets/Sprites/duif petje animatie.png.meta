@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: 09e7770142d96b041a9c2b69d98d3309
-timeCreated: 1477045849
+guid: b32cbb34cb8c2044280a4fe370268cae
+timeCreated: 1477045736
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: duiven formaat _0
-    21300002: duiven formaat _1
-    21300004: duiven formaat _2
-    21300006: duiven formaat _3
-    21300008: duiven formaat _4
-    21300010: duiven formaat _5
+    21300000: duif petje animatie_0
+    21300002: duif petje animatie_1
+    21300004: duif petje animatie_2
+    21300006: duif petje animatie_3
+    21300008: duif petje animatie_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,78 +58,65 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duiven formaat _0
+      name: duif petje animatie_0
       rect:
         serializedVersion: 2
-        x: 643
-        y: 457
+        x: 34
+        y: 791
         width: 129
-        height: 137
+        height: 129
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: duiven formaat _1
+      name: duif petje animatie_1
       rect:
         serializedVersion: 2
-        x: 933
-        y: 457
-        width: 122
-        height: 128
+        x: 307
+        y: 791
+        width: 129
+        height: 129
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: duiven formaat _2
+      name: duif petje animatie_2
       rect:
         serializedVersion: 2
-        x: 1218
-        y: 457
-        width: 121
-        height: 128
+        x: 580
+        y: 791
+        width: 129
+        height: 129
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: duiven formaat _3
+      name: duif petje animatie_3
       rect:
         serializedVersion: 2
-        x: 640
-        y: 221
-        width: 135
-        height: 140
+        x: 853
+        y: 791
+        width: 129
+        height: 129
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: duiven formaat _4
+      name: duif petje animatie_4
       rect:
         serializedVersion: 2
-        x: 927
-        y: 221
-        width: 138
-        height: 137
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: duiven formaat _5
-      rect:
-        serializedVersion: 2
-        x: 1218
-        y: 221
-        width: 121
-        height: 140
+        x: 1126
+        y: 791
+        width: 129
+        height: 129
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

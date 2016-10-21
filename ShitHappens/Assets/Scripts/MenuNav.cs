@@ -2,8 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+public enum species{hat, pirate, emo, fairy, girl, princess }
 public class MenuNav : MonoBehaviour {
-
     GameManager manager;
 
     public int sceneIndex;
@@ -37,21 +37,27 @@ public class MenuNav : MonoBehaviour {
             {
                 case 1:
                     manager.playerSprite = sprites[0];
+                    manager.kind = species.hat;
                     break;
                 case 2:
                     manager.playerSprite = sprites[1];
+                    manager.kind = species.pirate;
                     break;
                 case 3:
                     manager.playerSprite = sprites[2];
+                    manager.kind = species.emo;
                     break;
                 case 101:
                     manager.playerSprite = sprites[3];
+                    manager.kind = species.fairy;
                     break;
                 case 102:
                     manager.playerSprite = sprites[4];
+                    manager.kind = species.girl;
                     break;
                 case 103:
                     manager.playerSprite = sprites[5];
+                    manager.kind = species.princess;
                     break;
             }
             SceneManager.LoadScene(sceneIndex);
