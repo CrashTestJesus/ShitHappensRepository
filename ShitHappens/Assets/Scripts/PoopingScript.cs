@@ -19,8 +19,7 @@ public class PoopingScript : MonoBehaviour {
         {
             if (Input.GetButtonDown("Red"))
             {
-                poop = (GameObject)Instantiate(bullet, transform.position, transform.rotation);
-                poop.transform.position = new Vector3(pigeon.position.x, 1.5f, 0f);
+                poop = (GameObject)Instantiate(bullet, pigeon.position, transform.rotation);
                 Pooping();
             }
         }

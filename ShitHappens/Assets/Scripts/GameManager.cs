@@ -5,6 +5,10 @@ public class GameManager : MonoBehaviour {
 
     public Sprite playerSprite;
 
+    public int playerScore;
+
+    public string playerName;
+
     private static GameManager instance = null;
 
     public static GameManager Instance
