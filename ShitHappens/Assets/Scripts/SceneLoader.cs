@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour {
 
     public GameObject MusicHolder;
+    public int sceneIndex;
 
     // Use this for initialization
     void Start () {
@@ -12,9 +13,9 @@ public class SceneLoader : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	if (Input.GetKeyDown(KeyCode.R))
+	if (Input.GetButtonDown("Red"))
         {
-            Application.LoadLevel("MenuScene");
+            SceneManager.LoadScene(sceneIndex);
             DontDestroyOnLoad(MusicHolder);
         }
 	}

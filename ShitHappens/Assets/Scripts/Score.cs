@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
 
+    public GameObject scoreAdd;
+    public GameObject canvas;
+    public Transform scoreAddPos;
+
     Text scoreText;
     public string standardText;
 
@@ -35,6 +39,11 @@ public class Score : MonoBehaviour {
     public void AddScore(int points)
     {
         queScore += (points * 2);
+
+        GameObject obj = (GameObject)Instantiate(scoreAdd,scoreAddPos.localPosition, Quaternion.identity);
+        obj.transform.SetParent(canvas.transform);
+        obj.transform.localPosition = scoreAddPos.localPosition;
+        obj.GetComponent<ScoreTextRemove>().worth = points;
     }
     IEnumerator addDelay()
     {

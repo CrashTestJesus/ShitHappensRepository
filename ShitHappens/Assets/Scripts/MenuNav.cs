@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MenuNav : MonoBehaviour {
+
+    GameManager manager;
+
+    public int sceneIndex;
 
     public float delay;
 
@@ -16,12 +21,42 @@ public class MenuNav : MonoBehaviour {
 
     AudioSource Sound;
 
+    public Sprite[] sprites;
+
     void Start()
     {
+        manager = GameManager.Instance;
         trans = GetComponent<RectTransform>();
     }
 
 	void Update () {
+        //submitPlayer
+        if (Input.GetButtonDown("Red"))
+        {
+            switch (index)
+            {
+                case 1:
+                    manager.playerSprite = sprites[0];
+                    break;
+                case 2:
+                    manager.playerSprite = sprites[1];
+                    break;
+                case 3:
+                    manager.playerSprite = sprites[2];
+                    break;
+                case 101:
+                    manager.playerSprite = sprites[3];
+                    break;
+                case 102:
+                    manager.playerSprite = sprites[4];
+                    break;
+                case 103:
+                    manager.playerSprite = sprites[5];
+                    break;
+            }
+            SceneManager.LoadScene(sceneIndex);
+        }
+        //select player
         float xMove = Input.GetAxis("Horizontal");
         float yMove = Input.GetAxis("Vertical"); 
         

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    Sprite playerSprite;
+    public Sprite playerSprite;
 
     private static GameManager instance = null;
 

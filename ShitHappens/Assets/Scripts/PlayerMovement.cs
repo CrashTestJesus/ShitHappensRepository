@@ -10,14 +10,27 @@ public class PlayerMovement : MonoBehaviour {
     public float delay;
 
     public Sprite[] sprites;
+    public Sprite failSafe;
 
     bool CanMove = true;
 
     SpriteRenderer spriteRen;
 
+    GameManager manager;
+
     void Start()
     {
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         spriteRen = GetComponent<SpriteRenderer>();
+        sprites[0] = manager.playerSprite;
+        if (sprites[0] != null)
+        {
+            spriteRen.sprite = sprites[0];
+        }
+        else
+        {
+            spriteRen.sprite = failSafe;
+        }
     }
 
     void Update()
