@@ -17,6 +17,8 @@ public class HighScoresScript : MonoBehaviour {
     public Text[] scoreText;
 
     public savedata data;
+
+    public int sceneIndex;
     
     void Start()
     {
@@ -98,10 +100,10 @@ public class HighScoresScript : MonoBehaviour {
     }
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Red"))
         {
             Save();
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(sceneIndex);
         }
 
     }
