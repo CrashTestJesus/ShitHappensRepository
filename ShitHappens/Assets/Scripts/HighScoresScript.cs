@@ -24,7 +24,7 @@ public class HighScoresScript : MonoBehaviour {
     {
         Load();
 
-        manager = GameManager.Instance;
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         if (manager.playerScore > scores[0])
         {

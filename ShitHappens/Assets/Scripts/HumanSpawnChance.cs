@@ -7,12 +7,10 @@ public class HumanSpawnChance : MonoBehaviour {
 
     bool canSpawn = true;
 
-	// Use this for initialization
 	void Start () {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -27,7 +25,7 @@ public class HumanSpawnChance : MonoBehaviour {
 
     IEnumerator HumanSpawnDelay()
     {
-        yield return new WaitForSeconds(Random.Range(2, 3));
+        yield return new WaitForSeconds(Random.Range(1f, 3f));
         canSpawn = true;
     }
 }

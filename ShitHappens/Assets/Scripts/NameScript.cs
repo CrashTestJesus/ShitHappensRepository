@@ -36,7 +36,7 @@ public class NameScript : MonoBehaviour {
     public GameManager manager;
 
 	void Start () {
-        manager = GameManager.Instance;
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
             letterIndex = 1;
 
@@ -198,8 +198,7 @@ public class NameScript : MonoBehaviour {
     {
         string fullName = letterOne + letterTwo + letterThree;
         manager.playerName = fullName;
-        manager.playerScore = Random.Range(0, 3000);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(4);
     }
     IEnumerator Delay()
     {
