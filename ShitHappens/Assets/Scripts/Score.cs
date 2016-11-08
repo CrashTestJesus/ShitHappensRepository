@@ -12,7 +12,7 @@ public class Score : MonoBehaviour {
     public string standardText;
 
     public int queScore;
-    int displayScore;
+    public int displayScore;
 
     public float timerSpeed;
     float timer;

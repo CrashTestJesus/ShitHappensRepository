@@ -9,12 +9,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public float delay;
 
-    public Sprite[] sprites;
-    public Sprite failSafe;
-
     bool CanMove = true;
-
-    SpriteRenderer spriteRen;
 
     Animator anim;
 
@@ -24,26 +19,17 @@ public class PlayerMovement : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        spriteRen = GetComponent<SpriteRenderer>();
-        sprites[0] = manager.playerSprite;
-        if (sprites[0] != null)
-        {
-            spriteRen.sprite = sprites[0];
-        }
-        else
-        {
-            spriteRen.sprite = failSafe;
-        }
+
         switch (manager.kind)
         {
             case species.hat:
                 anim.SetBool("hat", true);
                 break;
             case species.pirate:
-                anim.SetBool("hat", true);
+                anim.SetBool("pirate", true);
                 break;
             case species.emo:
-                anim.SetBool("hat", true);
+                anim.SetBool("emo", true);
                 break;
             case species.fairy:
                 anim.SetBool("hat", true);

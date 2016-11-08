@@ -6,14 +6,12 @@ public class HumanSpeeds : MonoBehaviour {
     public GameObject FemaleHuman;
     public GameObject MaleHuman;
 
-    float movingSpeed = 5f;
+    public float movingSpeed = 5f;
 
-	// Use this for initialization
 	void Start () {
 	
 	}
 	
-	// Update is called once per frame
 	void Update () {
         transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
 
