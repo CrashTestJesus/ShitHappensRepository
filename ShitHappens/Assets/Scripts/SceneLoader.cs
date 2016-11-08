@@ -3,20 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour {
 
-    public GameObject MusicHolder;
     public int sceneIndex;
+
+    public GameObject musicHolder;
 
     // Use this for initialization
     void Start () {
-	
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	if (Input.GetButtonDown("Red"))
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetButtonDown("Red"))
         {
             SceneManager.LoadScene(sceneIndex);
-            DontDestroyOnLoad(MusicHolder);
+            DontDestroyOnLoad(musicHolder);
         }
-	}
+    }
 }

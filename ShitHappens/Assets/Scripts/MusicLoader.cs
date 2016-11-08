@@ -14,7 +14,7 @@ public class MusicLoader : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	if (Input.GetKey(KeyCode.R))
+	if (Input.GetKeyDown(KeyCode.R))
         {
             GetComponent<AudioSource>().PlayOneShot(Selection, 1f);
         }

@@ -23,6 +23,8 @@ public class MenuNav : MonoBehaviour {
 
     public Sprite[] sprites;
 
+    public GameObject musicHolder;
+
     void Start()
     {
         manager = GameManager.Instance;
