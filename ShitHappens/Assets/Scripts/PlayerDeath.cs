@@ -43,9 +43,14 @@ public class PlayerDeath : MonoBehaviour {
 
     void death()
     {
-        foreach(GameObject human in humans.humansOnScreen)
+        GetComponent<AudioSource>().PlayOneShot(Death, 1f);
+        foreach (GameObject human in humans.humansOnScreen)
         {
+<<<<<<< HEAD
             GetComponent<AudioSource>().PlayOneShot(Death, 1f);           
+=======
+            human.GetComponent<HumanSpeeds>().movingSpeed = 0;
+>>>>>>> origin/master
             int i = 0;
             i++;
             if(humans.humansOnScreen[i] != null)

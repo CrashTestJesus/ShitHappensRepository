@@ -25,14 +25,14 @@ public class HumanSpeeds : MonoBehaviour {
                 
             }
 
-            if (gameObject == Humans[1])
+            /*if (gameObject == Humans[1])
             {
                 Destroy(Humans[1]);
             }
             if (gameObject == Humans[2])
             {
                 Destroy(Humans[2]);
-            }
+            }*/
         }
     }
 }
