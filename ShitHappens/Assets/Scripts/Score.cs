@@ -40,10 +40,10 @@ public class Score : MonoBehaviour {
     {
         queScore += (points * 2);
 
-        GameObject obj = (GameObject)Instantiate(scoreAdd,scoreAddPos.localPosition, Quaternion.identity);
+        /*GameObject obj = (GameObject)Instantiate(scoreAdd,scoreAddPos.localPosition, Quaternion.identity);
         obj.transform.SetParent(canvas.transform);
         obj.transform.localPosition = scoreAddPos.localPosition;
-        obj.GetComponent<ScoreTextRemove>().worth = points;
+        obj.GetComponent<ScoreTextRemove>().worth = points;*/
     }
     IEnumerator addDelay()
     {

@@ -9,5 +9,10 @@ public class PoopBehaviour : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+        if (other.gameObject.CompareTag("Person"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

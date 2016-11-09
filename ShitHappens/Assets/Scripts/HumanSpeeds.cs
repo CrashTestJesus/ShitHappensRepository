@@ -7,16 +7,32 @@ public class HumanSpeeds : MonoBehaviour {
 
     public float movingSpeed = 5f;
     public float runnerSpeed = 10f;
+    public float stoppedSpeed = 4f;
 
 	void Start () {
-	
+        GameObject runner = GameObject.Find("Runner");
+        PoopOnHuman shat = runner.GetComponent<PoopOnHuman>();
+        shat.runnerShatOn = true;
 	}
 	
 	void Update () {
 
         if (Humans[0])
         {
-            transform.Translate(Vector2.left * runnerSpeed * Time.deltaTime);
+            if (GetComponent<PoopOnHuman>().runnerShatOn == false)
+            {
+                transform.Translate(Vector2.left * runnerSpeed * Time.deltaTime);
+            }
+
+            if (GetComponent<PoopOnHuman>().runnerShatOn == true)
+            {
+                transform.Translate(Vector2.left * stoppedSpeed * Time.deltaTime);
+            }
+        }
+
+        if (Humans[1])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
         }
 
         //Despawn humans
@@ -28,11 +44,11 @@ public class HumanSpeeds : MonoBehaviour {
                 
             }
 
-            /*if (gameObject == Humans[1])
+            if (gameObject == Humans[1])
             {
                 Destroy(Humans[1]);
             }
-            if (gameObject == Humans[2])
+            /*if (gameObject == Humans[2])
             {
                 Destroy(Humans[2]);
             }*/
