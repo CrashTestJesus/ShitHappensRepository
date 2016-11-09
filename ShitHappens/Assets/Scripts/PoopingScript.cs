@@ -8,6 +8,10 @@ public class PoopingScript : MonoBehaviour {
 
     public Transform pigeon;
 
+    public AudioClip Fart;
+
+    AudioSource Sound;
+
     public Image[] ammo;
 
     public int ammunition = 5;
@@ -19,6 +23,7 @@ public class PoopingScript : MonoBehaviour {
         {
             if (Input.GetButtonDown("Red"))
             {
+                GetComponent<AudioSource>().PlayOneShot(Fart, 1f);
                 poop = (GameObject)Instantiate(bullet, pigeon.position, transform.rotation);
                 Pooping();
             }
@@ -41,6 +46,8 @@ public class PoopingScript : MonoBehaviour {
     {
         ammunition--;
 
+        ammo[ammunition].enabled = false;
+/*
         switch (ammunition)
         {
             case 0:
@@ -59,6 +66,7 @@ public class PoopingScript : MonoBehaviour {
                 ammo[4].enabled = false;
                 break;
         }
+        */
     }
 
     void Eating()

@@ -7,18 +7,18 @@ public class SceneLoader : MonoBehaviour {
 
     public GameObject musicHolder;
 
-    // Use this for initialization
-    void Start () {
-
-	}
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Red"))
         {
             SceneManager.LoadScene(sceneIndex);
-            DontDestroyOnLoad(musicHolder);
+            //DontDestroyOnLoad(musicHolder);
+
+
         }
+        //if (Application.loadedLevelName == "MenuScene")
+        //{
+        //    Destroy(musicHolder);
+       // }
     }
 }

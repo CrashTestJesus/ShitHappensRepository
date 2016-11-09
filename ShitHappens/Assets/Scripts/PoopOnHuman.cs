@@ -6,6 +6,10 @@ public class PoopOnHuman : MonoBehaviour {
     public Sprite normal;
     public Sprite pooped;
 
+    public AudioClip Hit;
+
+    AudioSource sound;
+
     public int pointsWorth;
 
     public Score scoreScript;
@@ -22,6 +26,7 @@ public class PoopOnHuman : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Shit"))
         {
+            GetComponent<AudioSource>().PlayOneShot(Hit, 1f);
             SpriteRenderer.sprite = pooped;
             scoreScript.AddScore(pointsWorth);
         }

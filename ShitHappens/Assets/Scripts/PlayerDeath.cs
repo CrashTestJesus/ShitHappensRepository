@@ -12,6 +12,10 @@ public class PlayerDeath : MonoBehaviour {
     public BgMovement backgroundOne;
     public BgMovement backgroundTwo;
 
+    public AudioClip Death;
+
+    AudioSource Audio;
+
     public HumanSpawnChance humans;
 
     PlayerMovement mov;
@@ -41,6 +45,7 @@ public class PlayerDeath : MonoBehaviour {
     {
         foreach(GameObject human in humans.humansOnScreen)
         {
+            GetComponent<AudioSource>().PlayOneShot(Death, 1f);
             human.GetComponent<HumanSpeeds>().movingSpeed = 0;
             int i = 0;
             i++;
