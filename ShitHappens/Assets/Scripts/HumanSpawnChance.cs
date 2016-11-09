@@ -17,7 +17,6 @@ public class HumanSpawnChance : MonoBehaviour {
 
     void Update()
     {
-
         // Human spawner
         if (canSpawn == true)
         {
