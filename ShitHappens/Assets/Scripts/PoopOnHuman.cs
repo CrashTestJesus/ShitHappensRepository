@@ -3,8 +3,9 @@ using System.Collections;
 
 public class PoopOnHuman : MonoBehaviour {
 
-    public Sprite normal;
     public Sprite pooped;
+
+    Animator anim;
 
     public AudioClip Hit;
 
@@ -18,6 +19,7 @@ public class PoopOnHuman : MonoBehaviour {
 
 	void Start ()
     {
+        anim = GetComponent<Animator>();
         scoreScript = GameObject.Find("Score").GetComponent<Score>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
 	}
@@ -27,6 +29,7 @@ public class PoopOnHuman : MonoBehaviour {
         if (other.gameObject.CompareTag("Shit"))
         {
             GetComponent<AudioSource>().PlayOneShot(Hit, 1f);
+            anim.SetBool("pooped", true);
             SpriteRenderer.sprite = pooped;
             scoreScript.AddScore(pointsWorth);
         }

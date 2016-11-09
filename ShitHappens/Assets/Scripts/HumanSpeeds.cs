@@ -5,16 +5,19 @@ public class HumanSpeeds : MonoBehaviour {
 
     public GameObject[] Humans;
 
-
     public float movingSpeed = 5f;
+    public float runnerSpeed = 10f;
 
 	void Start () {
 	
 	}
 	
 	void Update () {
-        transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
 
+        if (Humans[0])
+        {
+            transform.Translate(Vector2.left * runnerSpeed * Time.deltaTime);
+        }
 
         //Despawn humans
         if (transform.position.x < -10f)
