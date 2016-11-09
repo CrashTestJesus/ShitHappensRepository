@@ -45,10 +45,13 @@ public class PlayerDeath : MonoBehaviour {
     {
         foreach(GameObject human in humans.humansOnScreen)
         {
-            GetComponent<AudioSource>().PlayOneShot(Death, 1f);
-            human.GetComponent<HumanSpeeds>().movingSpeed = 0;
+            GetComponent<AudioSource>().PlayOneShot(Death, 1f);           
             int i = 0;
             i++;
+            if(humans.humansOnScreen[i] != null)
+            {
+                human.GetComponent<HumanSpeeds>().movingSpeed = 0;
+            }
             if(i == humans.humansOnScreen.Count)
             {
                 Destroy(humans);

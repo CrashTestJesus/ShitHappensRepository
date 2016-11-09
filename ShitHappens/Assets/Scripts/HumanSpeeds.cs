@@ -22,6 +22,7 @@ public class HumanSpeeds : MonoBehaviour {
             if (gameObject == Humans[0])
             {
                 Destroy(Humans[0]);
+                
             }
 
             if (gameObject == Humans[1])
