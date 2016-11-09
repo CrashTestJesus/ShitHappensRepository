@@ -3,8 +3,8 @@ using System.Collections;
 
 public class HumanSpeeds : MonoBehaviour {
 
-    public GameObject FemaleHuman;
-    public GameObject MaleHuman;
+    public GameObject[] Humans;
+
 
     public float movingSpeed = 5f;
 
@@ -19,14 +19,18 @@ public class HumanSpeeds : MonoBehaviour {
         //Despawn humans
         if (transform.position.x < -10f)
         {
-            if (gameObject == MaleHuman)
+            if (gameObject == Humans[0])
             {
-                Destroy(MaleHuman);
+                Destroy(Humans[0]);
             }
 
-            if (gameObject == FemaleHuman)
+            if (gameObject == Humans[1])
             {
-                Destroy(FemaleHuman);
+                Destroy(Humans[1]);
+            }
+            if (gameObject == Humans[2])
+            {
+                Destroy(Humans[2]);
             }
         }
     }

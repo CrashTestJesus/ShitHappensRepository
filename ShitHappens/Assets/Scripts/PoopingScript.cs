@@ -9,6 +9,7 @@ public class PoopingScript : MonoBehaviour {
     public Transform pigeon;
 
     public AudioClip Fart;
+    public AudioClip Ammo;
 
     AudioSource Sound;
 
@@ -71,6 +72,7 @@ public class PoopingScript : MonoBehaviour {
 
     void Eating()
     {
+        GetComponent<AudioSource>().PlayOneShot(Ammo, 1f);
         canShit = true;
         ammunition++;
 
