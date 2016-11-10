@@ -18,6 +18,7 @@ public class MenuNav : MonoBehaviour {
     RectTransform trans;
 
     public AudioClip Selection;
+    public AudioClip start;
 
     AudioSource Sound;
 
@@ -35,6 +36,7 @@ public class MenuNav : MonoBehaviour {
         //submitPlayer
         if (Input.GetButtonDown("Red"))
         {
+            GetComponent<AudioSource>().PlayOneShot(start, 1f);
             switch (index)
             {
                 case 1:

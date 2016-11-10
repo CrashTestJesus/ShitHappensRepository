@@ -31,6 +31,10 @@ public class NameScript : MonoBehaviour {
     public int xPosSecond;
     public int xPosThird;
 
+    public AudioClip ding;
+
+    AudioSource source;
+
     public string[] alphabet = new string[26];
 
     public GameManager manager;
@@ -70,6 +74,9 @@ public class NameScript : MonoBehaviour {
         }
         if(axisY > 0 && canChange)
         {
+
+            //hierzo
+            GetComponent<AudioSource>().PlayOneShot(ding, 1f);
             switch (letterIndex)
             {
                 case 1:
@@ -196,6 +203,7 @@ public class NameScript : MonoBehaviour {
 
     void Submit()
     {
+        GetComponent<AudioSource>().PlayOneShot(ding, 1f);
         string fullName = letterOne + letterTwo + letterThree;
         manager.playerName = fullName;
         SceneManager.LoadScene(4);

@@ -8,6 +8,7 @@ public class HumanSpeeds : MonoBehaviour {
     public float movingSpeed = 5f;
     public float runnerSpeed = 10f;
     public float stoppedSpeed = 4f;
+    public float rastaSpeed = 1f;
 
 	void Start () {
         if (GetComponent<PoopOnHuman>() != null)
@@ -52,22 +53,30 @@ public class HumanSpeeds : MonoBehaviour {
         {
             transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
         }
+        if (gameObject == Humans[6])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
+        if (gameObject == Humans[7])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
+        if (gameObject == Humans[8])
+        {
+            transform.Translate(Vector2.left * rastaSpeed * Time.deltaTime);
+        }
 
 
         //Despawn humans
         if (transform.position.x < -10f)
         {
             Destroy(gameObject);
-<<<<<<< HEAD
 
             if (gameObject == Humans[0])
             {
                 Destroy(Humans[0]);
-            }
-        }   
-=======
+            }  
         }
->>>>>>> origin/master
     }
    public void death()
     {

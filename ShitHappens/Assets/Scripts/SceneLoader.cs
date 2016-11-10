@@ -16,9 +16,10 @@ public class SceneLoader : MonoBehaviour {
                 sceneIndex += 1;
                 SceneManager.LoadScene(sceneIndex);
                 DontDestroyOnLoad(musicHolder);
+                print(sceneIndex);
             }
         }
-        if (Application.loadedLevelName == "MenuScene")
+        if (Application.loadedLevelName == "GameScene")
         {
             Destroy(musicHolder);
         }
