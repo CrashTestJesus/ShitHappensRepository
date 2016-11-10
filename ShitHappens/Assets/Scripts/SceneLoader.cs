@@ -9,16 +9,18 @@ public class SceneLoader : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButtonDown("Red"))
+        if (sceneIndex < 1)
         {
-            SceneManager.LoadScene(sceneIndex);
-            //DontDestroyOnLoad(musicHolder);
-
-
+            if (Input.GetButtonDown("Red"))
+            {
+                sceneIndex += 1;
+                SceneManager.LoadScene(sceneIndex);
+                DontDestroyOnLoad(musicHolder);
+            }
         }
-        //if (Application.loadedLevelName == "MenuScene")
-        //{
-        //    Destroy(musicHolder);
-       // }
+        if (Application.loadedLevelName == "MenuScene")
+        {
+            Destroy(musicHolder);
+        }
     }
 }
