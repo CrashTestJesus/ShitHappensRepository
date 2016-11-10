@@ -32,41 +32,38 @@ public class HumanSpeeds : MonoBehaviour {
             }
         }
 
-        if (Humans[1])
+        if (gameObject == Humans[1])
         {
             transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
         }
-        if (Humans[2])
+        if (gameObject == Humans[2])
         {
             transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
         }
-        if (Humans[3])
+        if (gameObject == Humans[3])
         {
             transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
         }
+        if (gameObject == Humans[4])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
+        if (gameObject == Humans[5])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
+
 
         //Despawn humans
         if (transform.position.x < -10f)
         {
-<<<<<<< HEAD
             Destroy(gameObject);
-=======
+
             if (gameObject == Humans[0])
             {
                 Destroy(Humans[0]);
-                
             }
-
-            if (gameObject == Humans[1])
-            {
-                Destroy(Humans[1]);
-            }
-            if (gameObject == Humans[2])
-            {
-                Destroy(Humans[2]);
-            }
->>>>>>> origin/master
-        }
+        }   
     }
    public void death()
     {
