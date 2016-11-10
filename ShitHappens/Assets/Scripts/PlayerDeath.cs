@@ -46,7 +46,6 @@ public class PlayerDeath : MonoBehaviour {
         GetComponent<AudioSource>().PlayOneShot(Death, 1f);
         foreach (GameObject human in humans.humansOnScreen)
         {           
-
             int i = 0;
             i++;
             if(humans.humansOnScreen[i] != null)
