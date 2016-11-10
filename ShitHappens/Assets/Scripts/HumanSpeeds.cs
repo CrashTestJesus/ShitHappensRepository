@@ -65,8 +65,6 @@ public class HumanSpeeds : MonoBehaviour {
         {
             transform.Translate(Vector2.left * rastaSpeed * Time.deltaTime);
         }
-
-
         //Despawn humans
         if (transform.position.x < -10f)
         {
