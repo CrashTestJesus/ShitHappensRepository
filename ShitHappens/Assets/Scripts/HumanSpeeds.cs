@@ -58,16 +58,20 @@ public class HumanSpeeds : MonoBehaviour {
         if (transform.position.x < -10f)
         {
             Destroy(gameObject);
+<<<<<<< HEAD
 
             if (gameObject == Humans[0])
             {
                 Destroy(Humans[0]);
             }
         }   
+=======
+        }
+>>>>>>> origin/master
     }
    public void death()
     {
        movingSpeed = 0;
        runnerSpeed = 0;
-}
+    }
 }
