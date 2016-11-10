@@ -52,22 +52,11 @@ public class HumanSpeeds : MonoBehaviour {
         {
             transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
         }
-
-
         //Despawn humans
         if (transform.position.x < -10f)
         {
             Destroy(gameObject);
-<<<<<<< HEAD
-
-            if (gameObject == Humans[0])
-            {
-                Destroy(Humans[0]);
-            }
-        }   
-=======
         }
->>>>>>> origin/master
     }
    public void death()
     {
