@@ -20,17 +20,25 @@ public class HumanSpawnChance : MonoBehaviour {
         // Human spawner
         if (canSpawn == true)
         {
-            if (Humans[0])
+            int rand = Random.Range(0, Humans.Length);
+
+            if (rand == 0)
             {
-                GameObject human = (GameObject)Instantiate(Humans[Random.Range(0, Humans.Length)], new Vector3(10f, -1.86f, 0f), Quaternion.identity);
+                GameObject human = (GameObject)Instantiate(Humans[0], new Vector3(10f, -1.86f, 0f), Quaternion.identity);
                 humansOnScreen.Add(human);
             }
 
-            /*if (Humans[1])
+            if (rand == 1)
             {
-                GameObject child = (GameObject)Instantiate(Humans[Random.Range(0, Humans.Length)], new Vector3(10f, -2.32f, 0f), Quaternion.identity);
-                humansOnScreen.Add(child);
-            }*/
+                GameObject child1 = (GameObject)Instantiate(Humans[1], new Vector3(10f, -2.32f, 0f), Quaternion.identity);
+                humansOnScreen.Add(child1);
+            }
+
+            if (rand == 2)
+            {
+                GameObject woman = (GameObject)Instantiate(Humans[2], new Vector3(10f, -1.86f, 0f), Quaternion.identity);
+                humansOnScreen.Add(woman);
+            }
 
             canSpawn = false;
             StartCoroutine(HumanSpawnDelay());

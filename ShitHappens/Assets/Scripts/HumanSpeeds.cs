@@ -10,9 +10,11 @@ public class HumanSpeeds : MonoBehaviour {
     public float stoppedSpeed = 4f;
 
 	void Start () {
-        GameObject runner = GameObject.Find("Runner");
-        PoopOnHuman shat = runner.GetComponent<PoopOnHuman>();
-        shat.runnerShatOn = true;
+        if (GetComponent<PoopOnHuman>() != null)
+        {
+            PoopOnHuman shat = GetComponent<PoopOnHuman>();
+            shat.runnerShatOn = true;
+        }
 	}
 	
 	void Update () {
@@ -31,6 +33,10 @@ public class HumanSpeeds : MonoBehaviour {
         }
 
         if (Humans[1])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
+        if (Humans[2])
         {
             transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
         }
