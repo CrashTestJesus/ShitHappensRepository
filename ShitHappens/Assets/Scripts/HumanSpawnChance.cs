@@ -39,6 +39,10 @@ public class HumanSpawnChance : MonoBehaviour {
                 GameObject woman = (GameObject)Instantiate(Humans[2], new Vector3(10f, -1.86f, 0f), Quaternion.identity);
                 humansOnScreen.Add(woman);
             }
+            if (rand == 3)
+            {
+                GameObject man = (GameObject)Instantiate(Humans[3], new Vector3(10f, -3.284876f, 0f), Quaternion.identity);
+            }
 
             canSpawn = false;
             StartCoroutine(HumanSpawnDelay());

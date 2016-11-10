@@ -13,13 +13,13 @@ public class HumanSpeeds : MonoBehaviour {
         if (GetComponent<PoopOnHuman>() != null)
         {
             PoopOnHuman shat = GetComponent<PoopOnHuman>();
-            shat.runnerShatOn = true;
+            shat.runnerShatOn = false;
         }
 	}
 	
 	void Update () {
 
-        if (Humans[0])
+        if (gameObject == Humans[0])
         {
             if (GetComponent<PoopOnHuman>().runnerShatOn == false)
             {
@@ -40,24 +40,15 @@ public class HumanSpeeds : MonoBehaviour {
         {
             transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
         }
+        if (Humans[3])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
 
         //Despawn humans
         if (transform.position.x < -10f)
         {
-            if (gameObject == Humans[0])
-            {
-                Destroy(Humans[0]);
-                
-            }
-
-            if (gameObject == Humans[1])
-            {
-                Destroy(Humans[1]);
-            }
-            /*if (gameObject == Humans[2])
-            {
-                Destroy(Humans[2]);
-            }*/
+            Destroy(gameObject);
         }
     }
 }

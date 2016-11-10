@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: a170697cd145ac64a8259a5d1be99bb6
-timeCreated: 1478778141
+guid: f810b914553f7ac4ab7ba3eb711d19a6
+timeCreated: 1478782578
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mens vrouw gescaled_0
-    21300002: mens vrouw gescaled_1
-    21300004: mens vrouw gescaled_2
-    21300006: mens vrouw gescaled_3
-    21300008: mens vrouw gescaled_4
+    21300000: mens vrouw gescaled (1)_0
+    21300002: mens vrouw gescaled (1)_1
+    21300004: mens vrouw gescaled (1)_2
+    21300006: mens vrouw gescaled (1)_3
+    21300008: mens vrouw gescaled (1)_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -58,7 +58,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mens vrouw gescaled_0
+      name: mens vrouw gescaled (1)_0
       rect:
         serializedVersion: 2
         x: 25
@@ -71,7 +71,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mens vrouw gescaled_1
+      name: mens vrouw gescaled (1)_1
       rect:
         serializedVersion: 2
         x: 137
@@ -84,7 +84,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mens vrouw gescaled_2
+      name: mens vrouw gescaled (1)_2
       rect:
         serializedVersion: 2
         x: 248
@@ -97,7 +97,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mens vrouw gescaled_3
+      name: mens vrouw gescaled (1)_3
       rect:
         serializedVersion: 2
         x: 359
@@ -110,7 +110,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mens vrouw gescaled_4
+      name: mens vrouw gescaled (1)_4
       rect:
         serializedVersion: 2
         x: 25
