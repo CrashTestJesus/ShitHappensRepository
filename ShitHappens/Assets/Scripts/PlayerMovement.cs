@@ -32,13 +32,13 @@ public class PlayerMovement : MonoBehaviour {
                 anim.SetBool("emo", true);
                 break;
             case species.fairy:
-                anim.SetBool("hat", true);
+                anim.SetBool("elf", true);
                 break;
             case species.girl:
-                anim.SetBool("hat", true);
+                anim.SetBool("girl", true);
                 break;
             case species.princess:
-                anim.SetBool("hat", true);
+                anim.SetBool("princess", true);
                 break;
         }
     }

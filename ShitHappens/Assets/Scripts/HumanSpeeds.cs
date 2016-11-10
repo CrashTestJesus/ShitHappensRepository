@@ -54,10 +54,15 @@ public class HumanSpeeds : MonoBehaviour {
             {
                 Destroy(Humans[1]);
             }
-            /*if (gameObject == Humans[2])
+            if (gameObject == Humans[2])
             {
                 Destroy(Humans[2]);
-            }*/
+            }
         }
     }
+   public void death()
+    {
+       movingSpeed = 0;
+       runnerSpeed = 0;
+}
 }
