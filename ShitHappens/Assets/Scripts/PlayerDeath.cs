@@ -9,8 +9,12 @@ public class PlayerDeath : MonoBehaviour {
     public Score finalScore;
     public GameObject particle;
 
-    public BgMovement backgroundOne;
-    public BgMovement backgroundTwo;
+    public BackgroundController backgroundOneFront;
+    public BackgroundController backgroundOneBack;
+    public BackgroundController backgroundOneMid;
+    public BackgroundController backgroundTwoFront;
+    public BackgroundController backgroundTwoMid;
+    public BackgroundController backgroundTwoBack;
 
     public AudioClip Death;
 
@@ -61,8 +65,12 @@ public class PlayerDeath : MonoBehaviour {
         mov.downSpeed = 0;
         mov.forwardSpeed = 0;
         mov.downSpeed = 0;
-        backgroundOne.speed = 0;
-        backgroundTwo.speed = 0;
+        backgroundOneFront.speed = 0;
+        backgroundOneBack.speed = 0;
+        backgroundOneMid.speed = 0;
+        backgroundTwoFront.speed = 0;
+        backgroundTwoMid.speed = 0;
+        backgroundTwoBack.speed = 0;
         playerSprite.enabled = false;
         particle.SetActive(true);
         manager.playerScore = finalScore.displayScore;
