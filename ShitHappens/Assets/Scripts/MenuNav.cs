@@ -28,7 +28,7 @@ public class MenuNav : MonoBehaviour {
 
     void Start()
     {
-        manager = GameManager.Instance;
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         trans = GetComponent<RectTransform>();
     }
 

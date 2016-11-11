@@ -29,9 +29,9 @@ public class Score : MonoBehaviour {
         {
             canAdd = false;
             StartCoroutine(addDelay());
-            displayScore += 10;
             queScore -= 10;
-            timer = 0;
+            timer = 0;  displayScore += 10;
+          
             scoreText.text = standardText + displayScore.ToString();
         }
     }

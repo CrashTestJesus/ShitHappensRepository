@@ -15,6 +15,7 @@ public class PoopOnHuman : MonoBehaviour {
     public int pointsWorth;
 
     public bool runnerShatOn = false;
+    public bool shatOn = false;
 
     public Score scoreScript;
 
@@ -39,9 +40,11 @@ public class PoopOnHuman : MonoBehaviour {
             SpriteRenderer.sprite = pooped;
             scoreScript.AddScore(pointsWorth);
             runnerShatOn = true;
+            shatOn = true;
         }
         if (other.gameObject.CompareTag("Food"))
-        {
+            
+            {
             GetComponent<AudioSource>().PlayOneShot(Hit, 1f);
             anim.SetBool("Food", true);
             Destroy(anim);

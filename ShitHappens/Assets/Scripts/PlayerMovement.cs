@@ -40,6 +40,9 @@ public class PlayerMovement : MonoBehaviour {
             case species.princess:
                 anim.SetBool("princess", true);
                 break;
+            default:
+                anim.SetBool("hat", true);
+                break;
         }
     }
 
