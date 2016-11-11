@@ -128,6 +128,7 @@ public class NameScript : MonoBehaviour {
         }
         if (axisY < 0 && canChange)
         {
+            GetComponent<AudioSource>().PlayOneShot(ding, 1f);
             switch (letterIndex)
             {
                 case 1:
@@ -179,7 +180,8 @@ public class NameScript : MonoBehaviour {
         }
         if (axisX > 0 && canChange)
         {
-            if(letterIndex < 3)
+            GetComponent<AudioSource>().PlayOneShot(ding, 1f);
+            if (letterIndex < 3)
             {
                 letterIndex++;
                 canChange = false;
@@ -188,7 +190,8 @@ public class NameScript : MonoBehaviour {
         }
         if(axisX < 0 && canChange)
         {
-            if(letterIndex > 1)
+            GetComponent<AudioSource>().PlayOneShot(ding, 1f);
+            if (letterIndex > 1)
             {
                 letterIndex--;
                 canChange = false;

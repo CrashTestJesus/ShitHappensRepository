@@ -56,7 +56,21 @@ public class PlayerDeath : MonoBehaviour {
             {
                 human.GetComponent<HumanSpeeds>().movingSpeed = 0;
             }
-            if(i == humans.humansOnScreen.Count)
+            if (i == humans.humansOnScreen.Count)
+            {
+                Destroy(humans);
+            }
+        }
+        foreach (GameObject stand in humans.standsOnScreen)
+        {
+            int i = 0;
+            
+            if (humans.standsOnScreen[i] != null)
+            {
+                stand.GetComponent<StandSpeed>().StandsSpeed = 0;
+            }
+            i++;
+            if (i == humans.standsOnScreen.Count)
             {
                 Destroy(humans);
             }

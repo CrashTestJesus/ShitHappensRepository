@@ -28,17 +28,17 @@ public class HumanSpawnChance : MonoBehaviour {
 
             if (stand == 0)
             {
-                GameObject fries = (GameObject)Instantiate(Stands[0], new Vector3(15f, -1.21f, 0f), Quaternion.identity);
+                GameObject fries = (GameObject)Instantiate(Stands[0], new Vector3(15f, -3.4f, 0f), Quaternion.identity);
                 standsOnScreen.Add(fries);
             }
             if (stand == 1)
             {
-                GameObject ice = (GameObject)Instantiate(Stands[1], new Vector3(15f, -1.21f, 0f), Quaternion.identity);
+                GameObject ice = (GameObject)Instantiate(Stands[1], new Vector3(15f, -3.4f, 0f), Quaternion.identity);
                 standsOnScreen.Add(ice);
             }
             if (stand == 2)
             {
-                GameObject hotdog = (GameObject)Instantiate(Stands[2], new Vector3(15f, -1.49f, 0f), Quaternion.identity);
+                GameObject hotdog = (GameObject)Instantiate(Stands[2], new Vector3(15f, -3.4f, 0f), Quaternion.identity);
                 standsOnScreen.Add(hotdog);
             }
 
