@@ -65,6 +65,23 @@ public class HumanSpeeds : MonoBehaviour {
         {
             transform.Translate(Vector2.left * rastaSpeed * Time.deltaTime);
         }
+        if (gameObject == Humans[9])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
+        if (gameObject == Humans[10])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
+        if (gameObject == Humans[11])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
+        if (gameObject == Humans[12])
+        {
+            transform.Translate(Vector2.left * movingSpeed * Time.deltaTime);
+        }
+
         //Despawn humans
         if (transform.position.x < -10f)
         {
